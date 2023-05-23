@@ -7,6 +7,7 @@ import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
 import { UserContext } from "../../UserContext";
 import Error from "../Helper/Error";
+import Head from "../Helper/Head";
 
 const LoginForm = () => {
   const username = useForm();
@@ -24,6 +25,7 @@ const LoginForm = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Login" />
       <h1 className="title">Login</h1>
       <form className={styles.form} action="" onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
@@ -33,7 +35,7 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error} />
+        <Error error={error && "Usuário ou Senha Inválido"} />
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
         Perdeu a Senha?

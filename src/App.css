@@ -46,6 +46,15 @@ button, input {
     margin: 0 auto;
 }
 
+.container2{
+    height: calc(100vh + 40rem);
+   
+}
+
+.mainContainer{
+    margin-top: 2rem;
+}
+
 .title{
     font-family: var(--type-second);
     line-height: 1;
@@ -79,4 +88,18 @@ button, input {
         opacity: 1;
         transform: initial;
     }
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh + 10rem);
+}
+
+.appBody{
+    flex: 1;
+}
+
+.VictoryContainer{
+    height: initial !important;
 }
